@@ -48,7 +48,7 @@ Stylesheet:
 
 Layer:
   - Datasource:
-      file: http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip
+      file: simplified-water-polygons-split-3857/simplified_water_polygons.shp
       type: shape
     class: shp
     geometry: polygon
@@ -57,7 +57,7 @@ Layer:
 
   - id: land-high
     Datasource:
-      file: http://data.openstreetmapdata.com/land-polygons-split-3857.zip
+      file: water-polygons-split-3857/water_polygons.shp
       type: shape
     class: shp
     geometry: polygon
@@ -537,6 +537,7 @@ Layer:
             OR office IN ('ngo', 'government') OR tags @> hstore ('emergency', 'fire_hydrant')
             OR power IN ('generator', 'sub_station', 'tower', 'pole') OR barrier IN ('border_control')
         ) AS data
+    status: 'off'
     advanced:
       extent_from_subquery: 'true'
 
@@ -559,6 +560,7 @@ Layer:
             OR highway IN ('bus_stop','traffic_signals') OR historic in ('memorial','archaeological_site') OR leisure='playground'
             OR power IN ('plant', 'sub_station') OR office IN ('ngo', 'government')
         ) AS data
+    status: 'off'
     advanced:
       extent_from_subquery: 'true'
 
