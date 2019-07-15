@@ -15,7 +15,7 @@
 
 #land-low[zoom>=0][zoom<10],
 #land-high[zoom>=10] {
-  polygon-fill: @land;
+  polygon-fill: @water;
   polygon-gamma: 0.75;
 }
 
@@ -215,7 +215,7 @@
 /* ================================================================== */
 
 Map {
-  background-color: @water;
+  background-color: @land;
   buffer-size: 256;
 }
 
